@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle, Star, Shield, PenTool, Wrench, ChevronRight, Phone, MapPin, Mail } from 'lucide-react';
+import { Services } from './components/sections/Services';
 
 const WA_NUMBER = "918928777727"; // Raj Artz WhatsApp number
 
@@ -12,7 +13,7 @@ const handleWhatsAppClick = (serviceName = "") => {
   window.open(url, '_blank');
 };
 
-const services = [
+const _services = [
   { name: 'LED Name Plates', image: '/anjani niwas led.png' },
   { name: 'LED Sign Boards', image: '/led board roopam.png' },
   { name: 'Vehicle Wrap', image: '/nexon car wrap.png' },
@@ -183,40 +184,7 @@ export default function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-[#D4AF37] uppercase tracking-[0.3em] text-sm mb-4 font-semibold">What We Offer</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Premium Services</h2>
-          <div className="h-1 w-20 bg-[#D4AF37] mx-auto rounded"></div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="group bg-[#1a1a1a] rounded-xl border border-neutral-800 hover:border-[#D4AF37] transition-all duration-500 hover:shadow-lg hover:shadow-[#D4AF37]/20 overflow-hidden"
-            >
-              <div className="aspect-[4/3] bg-neutral-900 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.name} 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
-                <button 
-                  onClick={() => handleWhatsAppClick(service.name)}
-                  className="bg-[#D4AF37] text-black px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-[#b5952f] transition-all duration-300 w-full justify-center group-hover:shadow-lg group-hover:shadow-[#D4AF37]/30"
-                >
-                  <MessageCircle size={18} />
-                  Request Pricing
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Services />
 
       {/* Why Choose Us */}
       <section className="py-24 bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a] border-y border-neutral-800">
