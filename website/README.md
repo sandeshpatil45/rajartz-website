@@ -1,16 +1,93 @@
-# React + Vite
+# 🎨 RAJ ARTZ - Premium 3D Interactive Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, cinematic website with 3D graphics, scroll-driven animations, and glassmorphism design.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18+** - UI Framework
+- **Vite** - Build Tool
+- **Tailwind CSS** - Styling
+- **Framer Motion** - UI Animations
+- **GSAP** - Scroll Animations
+- **Three.js** - 3D Graphics
+- **React Three Fiber** - React wrapper for Three.js
 
-## React Compiler
+## 📦 Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+cd website
+npm install
+```
 
-## Expanding the ESLint configuration
+## 🛠️ Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run dev
+```
+
+Visit: http://localhost:5173
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+## 📁 Project Structure
+
+```
+website/
+├── src/
+│   ├── components/
+│   │   ├── 3d/          # Three.js components
+│   │   ├── ui/          # Reusable UI components
+│   │   ├── sections/    # Page sections
+│   │   └── animations/  # Animation hooks
+│   ├── hooks/           # Custom React hooks
+│   ├── utils/           # Helper functions
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+└── vite.config.js
+```
+
+## 🎨 Design System
+
+### Colors
+- Background: `#0a0a0a`
+- Gold Accent: `#d4af37`
+- Neon Accent: `#00ffff`
+
+### Typography
+- Headings: Orbitron
+- Body: Inter
+
+### Animations
+- `animate-float` - Floating effect
+- `animate-glow` - Glow effect
+- `animate-breathe` - Breathing opacity
+
+## 🔧 Configuration
+
+WhatsApp number is set in `src/App.jsx`:
+```javascript
+href="https://wa.me/918928777727"
+```
+
+## 📱 Performance
+
+- Lazy loading for 3D assets
+- Mobile-responsive design
+- WebGL fallback support
+- Optimized bundle splitting
+
+## 🚀 Deployment
+
+```bash
+npm run build
+# Deploy the dist/ folder
+```
+
+## 📝 License
+
+© 2024 RAJ ARTZ. All rights reserved.
