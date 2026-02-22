@@ -42,6 +42,9 @@ const Slider = ({ pair }) => {
     if (isDragging.current) updatePosition(e.touches[0].clientX);
   }, [updatePosition]);
 
+  // Width of the "before" image stretched back to full container so it aligns with the "after" image
+  const beforeImgWidth = position > 0 ? `${(100 / position) * 100}%` : '100%';
+
   return (
     <div
       ref={containerRef}
@@ -56,9 +59,14 @@ const Slider = ({ pair }) => {
       {/* After (right) */}
       <img src={pair.after} alt="After" className="absolute inset-0 w-full h-full object-cover" />
 
-      {/* Before (left - clipped): img width = 100%/position*100 so it always fills the clipped container */}
+      {/* Before (left - clipped): img stretched back to full width so it aligns with the After image */}
       <div className="absolute inset-0 overflow-hidden" style={{ width: `${position}%` }}>
-        <img src={pair.before} alt="Before" className="absolute inset-0 w-full h-full object-cover" style={{ width: `${(100 / position) * 100}%` }} />
+        <img
+          src={pair.before}
+          alt="Before"
+          className="absolute inset-0 h-full object-cover"
+          style={{ width: beforeImgWidth }}
+        />
       </div>
 
       {/* Divider line */}
