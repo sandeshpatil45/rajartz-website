@@ -56,9 +56,9 @@ const Slider = ({ pair }) => {
       {/* After (right) */}
       <img src={pair.after} alt="After" className="absolute inset-0 w-full h-full object-cover" />
 
-      {/* Before (left - clipped) */}
+      {/* Before (left - clipped): img width = 100%/position*100 so it always fills the clipped container */}
       <div className="absolute inset-0 overflow-hidden" style={{ width: `${position}%` }}>
-        <img src={pair.before} alt="Before" className="absolute inset-0 w-full h-full object-cover" style={{ width: `${10000/position}%` }} />
+        <img src={pair.before} alt="Before" className="absolute inset-0 w-full h-full object-cover" style={{ width: `${(100 / position) * 100}%` }} />
       </div>
 
       {/* Divider line */}
