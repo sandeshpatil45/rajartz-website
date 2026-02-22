@@ -1,36 +1,78 @@
 # 🎨 RAJ ARTZ - Premium 3D Interactive Website
 
-Modern, cinematic website with 3D graphics, scroll-driven animations, and glassmorphism design.
+Modern, cinematic website with 3D graphics, scroll-driven animations, and interactive service showcases.
 
-## 🚀 Tech Stack
+## ✨ Features
 
-- **React 18+** - UI Framework
-- **Vite** - Build Tool
-- **Tailwind CSS** - Styling
-- **Framer Motion** - UI Animations
-- **GSAP** - Scroll Animations
-- **Three.js** - 3D Graphics
-- **React Three Fiber** - React wrapper for Three.js
+### Phase 1 - Foundation
+- ✅ React 18 + Vite + Tailwind CSS
+- ✅ 3D Hero scene with animated particles
+- ✅ Glassmorphism design system
+- ✅ Premium loader with progress bar
+- ✅ Scroll animations (Framer Motion + GSAP)
+- ✅ Mobile responsive
 
-## 📦 Installation
+### Phase 2 - Interactive Services
+- ✅ 5 Service cards with hover effects
+- ✅ Full-screen 3D model viewer
+- ✅ Interactive 3D models:
+  - 🚗 Vehicle Wrapping (metallic car)
+  - 💡 LED Signboards (glowing neon)
+  - 🪵 Wood Carving (3D depth)
+  - ⚡ Jali Cutting (laser pattern)
+  - 💧 Hydro Dipping (liquid effect)
+- ✅ Orbit controls (drag, zoom, pan)
+- ✅ Auto-rotation for all models
+
+## 🚀 Quick Start
 
 ```bash
 cd website
 npm install
-```
-
-## 🛠️ Development
-
-```bash
 npm run dev
 ```
 
 Visit: http://localhost:5173
 
-## 🏗️ Build
+## 📦 Build
 
 ```bash
 npm run build
+```
+
+## 🛠️ Tech Stack
+
+- React 18
+- Vite 5
+- Tailwind CSS 3
+- Framer Motion 11
+- GSAP 3
+- Three.js + React Three Fiber
+- React Three Drei
+
+## 🎨 Design System
+
+**Colors:**
+- Background: `#0a0a0a`
+- Gold: `#d4af37`
+- Neon Cyan: `#00ffff`
+
+**Fonts:**
+- Headings: Orbitron
+- Body: Inter
+
+## 📱 Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## 🔧 Configuration
+
+Update WhatsApp number in `src/App.jsx`:
+```javascript
+href="https://wa.me/YOUR_NUMBER"
 ```
 
 ## 📁 Project Structure
@@ -39,55 +81,41 @@ npm run build
 website/
 ├── src/
 │   ├── components/
-│   │   ├── 3d/          # Three.js components
-│   │   ├── ui/          # Reusable UI components
-│   │   ├── sections/    # Page sections
-│   │   └── animations/  # Animation hooks
-│   ├── hooks/           # Custom React hooks
-│   ├── utils/           # Helper functions
+│   │   ├── 3d/
+│   │   │   ├── HeroScene.jsx
+│   │   │   ├── effects/
+│   │   │   │   ├── Particles.jsx
+│   │   │   │   └── Lighting.jsx
+│   │   │   └── models/
+│   │   │       ├── CarModel.jsx
+│   │   │       ├── LedSignModel.jsx
+│   │   │       ├── WoodCarvingModel.jsx
+│   │   │       ├── JaliCuttingModel.jsx
+│   │   │       └── HydroDippingModel.jsx
+│   │   ├── ui/
+│   │   │   ├── Button.jsx
+│   │   │   ├── GlassCard.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   └── ServiceModal.jsx
+│   │   ├── sections/
+│   │   │   ├── Hero.jsx
+│   │   │   └── Services.jsx
+│   │   └── animations/
+│   │       └── ScrollAnimations.jsx
+│   ├── hooks/
+│   │   ├── useScrollProgress.js
+│   │   ├── use3DLoader.js
+│   │   ├── useDeviceDetection.js
+│   │   └── useModelLoader.js
+│   ├── utils/
+│   │   └── performance.js
 │   ├── App.jsx
 │   └── main.jsx
 ├── index.html
 └── vite.config.js
 ```
 
-## 🎨 Design System
-
-### Colors
-- Background: `#0a0a0a`
-- Gold Accent: `#d4af37`
-- Neon Accent: `#00ffff`
-
-### Typography
-- Headings: Orbitron
-- Body: Inter
-
-### Animations
-- `animate-float` - Floating effect
-- `animate-glow` - Glow effect
-- `animate-breathe` - Breathing opacity
-
-## 🔧 Configuration
-
-WhatsApp number is set in `src/App.jsx`:
-```javascript
-href="https://wa.me/918928777727"
-```
-
-## 📱 Performance
-
-- Lazy loading for 3D assets
-- Mobile-responsive design
-- WebGL fallback support
-- Optimized bundle splitting
-
-## 🚀 Deployment
-
-```bash
-npm run build
-# Deploy the dist/ folder
-```
-
-## 📝 License
+## 📄 License
 
 © 2024 RAJ ARTZ. All rights reserved.
+

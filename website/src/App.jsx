@@ -2,6 +2,7 @@ import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Loader } from './components/ui/Loader';
 import { Hero } from './components/sections/Hero';
+import { Services } from './components/sections/Services';
 import { useScrollAnimations } from './components/animations/ScrollAnimations';
 import { use3DLoader } from './hooks/use3DLoader';
 import { useDeviceDetection } from './hooks/useDeviceDetection';
@@ -21,9 +22,11 @@ function App() {
 
       {!loading && (
         <div className="relative">
+          {/* Phase 1: Hero Section */}
           <Hero />
 
-          {/* Existing sections will be integrated in Phase 2 */}
+          {/* Phase 2: Services Section */}
+          <Services />
 
           {/* Floating WhatsApp Button */}
           <a
